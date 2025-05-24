@@ -18,8 +18,6 @@ class HomeViewModel extends ChangeNotifier {
   String get errorMessage => _errorMessage;
 
   Future<void> loadServices() async {
-    _state = HomeViewState.loading;
-    notifyListeners();
     try {
       _services = await _repository.getAllServices();
       _state = HomeViewState.loaded;
