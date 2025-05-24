@@ -2,16 +2,14 @@ class MusicModel {
   final String id;
   final String title;
   final String description;
-  final String iconType;
-  final String iconColor;
+  final String iconPath;
   final int order;
 
   MusicModel({
     required this.id,
     required this.title,
     required this.description,
-    required this.iconType,
-    required this.iconColor,
+    required this.iconPath,
     required this.order,
   });
 
@@ -20,8 +18,7 @@ class MusicModel {
       id: id,
       title: data['title'] ?? '',
       description: data['description'] ?? '',
-      iconType: data['iconType'] ?? 'music_note',
-      iconColor: data['iconColor'] ?? 'red',
+      iconPath: data['iconPath'] ?? 'music_note',
       order: data['order'] ?? 0,
     );
   }
@@ -30,8 +27,7 @@ class MusicModel {
     return {
       'title': title,
       'description': description,
-      'iconType': iconType,
-      'iconColor': iconColor,
+      'iconPath': iconPath,
       'order': order,
     };
   }
