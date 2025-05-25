@@ -33,36 +33,34 @@ class _HomeScreenState extends State<HomeScreen> {
               HeroSection(),
 
               //search bar
-              Container(
-                margin: EdgeInsets.all(16),
-                padding: EdgeInsets.only(top: 24),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 38,
+                  horizontal: 20,
+                ),
                 child: Row(
-                  spacing: 12,
+                  spacing: 10,
                   children: [
                     Expanded(
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 12,
-                        ),
-                        decoration: BoxDecoration(
-                          color: AppColors.cardbgColor,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Row(
-                          spacing: 12,
-                          children: [
-                            Icon(Icons.search, color: AppColors.textPrimary),
-                            Text(
-                              'Search "Punjabi Lyrics"',
-                              style: TextStyle(
-                                color: AppColors.searchHintColor,
-                                fontSize: 16,
-                              ),
-                            ),
-                            Spacer(),
-                            Icon(Icons.mic, color: AppColors.textPrimary),
-                          ],
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Search "Punjabi Lyrics"',
+                          hintStyle: TextStyle(
+                            color: AppColors.searchHintColor,
+                          ),
+                          filled: true,
+                          fillColor: AppColors.bgColor,
+                          prefixIcon: Icon(
+                            Icons.search,
+                            color: AppColors.textPrimary,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.mic,
+                            color: AppColors.textPrimary,
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
                         ),
                       ),
                     ),
