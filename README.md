@@ -1,17 +1,55 @@
-# flutter_intern_assignment
+# Flutter Intern Assinment For Recreating S.Rocks.Music Home UI
 
-A new Flutter project.
+A modern music services app home UI built with Flutter that showcases various music production services with a sleek dark theme UI.
 
-## Getting Started
+## 📱 Features
 
-This project is a starting point for a Flutter application.
+- **Beautiful UI**: Dark theme with gradient hero section
+- **Dynamic Content**: Services loaded from Firebase Firestore
+- **Responsive Design**: Works on all screen sizes
+- **Navigation**: Tap any service card to navigate to details
+- **State Management**: Uses Provider pattern
+- **MVVM Architecture**: Clean code structure
 
-A few resources to get you started if this is your first Flutter project:
+## 🏗️ Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+Presentation Layer (Views & Widgets)
+       ↓
+ViewModel Layer (Business Logic)
+       ↓
+Repository Layer (Data Access)
+       ↓
+Firebase Firestore (Database)
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Flutter-Intern-Assignment
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK (latest stable version)
+- Firebase account
+- Android Studio / VS Code
+
+
+## 📁 Project Structure
+
+```
+lib/
+├── main.dart                 # App entry point
+├── core/                     # Core utilities & constants
+│   ├── constants/           # Colors, strings, dimensions
+├── data/                     # Data layer
+│   ├── models/              # Data models
+│   └── repositories/        # Data access logic
+├── view/                    # UI layer
+│   ├── screens/             # App screens
+│   └── widgets/             # Screen-specific widgets
+└── ├── view_models/         # Business logic
+```
+
+## 🔧 Key Technologies
+
+- **Flutter**: Cross-platform mobile framework
+- **Firebase Firestore**: Real-time database
+- **Provider**: State management
+- **MVVM Pattern**: Architecture pattern
