@@ -73,13 +73,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14, vertical: 18),
+            padding: EdgeInsets.symmetric(horizontal: 14, vertical: 20),
             child: Text(
               'Hire hand-picked Pros for popular music services',
               style: TextStyle(color: AppColors.textPrimary, fontSize: 15),
             ),
           ),
-          Expanded(
+          Flexible(
             child: Consumer<HomeViewModel>(
               builder: (context, viewModel, child) {
                 switch (viewModel.state) {
