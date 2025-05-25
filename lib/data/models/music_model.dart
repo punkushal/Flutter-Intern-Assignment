@@ -4,6 +4,7 @@ class MusicModel {
   final String description;
   final String iconPath;
   final int order;
+  final String bgImgPath;
 
   MusicModel({
     required this.id,
@@ -11,15 +12,17 @@ class MusicModel {
     required this.description,
     required this.iconPath,
     required this.order,
+    required this.bgImgPath,
   });
 
   factory MusicModel.fromFirestore(Map<String, dynamic> data, String id) {
     return MusicModel(
       id: id,
-      title: data['title'] ?? '',
-      description: data['description'] ?? '',
-      iconPath: data['iconPath'] ?? 'music_note',
-      order: data['order'] ?? 0,
+      title: data['title'],
+      description: data['description'],
+      iconPath: data['iconPath'],
+      order: data['order'],
+      bgImgPath: data['bgImgPath'],
     );
   }
 
@@ -29,6 +32,7 @@ class MusicModel {
       'description': description,
       'iconPath': iconPath,
       'order': order,
+      'bgImagPath': bgImgPath,
     };
   }
 }
